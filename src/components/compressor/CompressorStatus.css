@@ -1,0 +1,25 @@
+.CompressorStatus{
+    margin: 5px;
+}
+.compressor-status{
+    border: 2px solid grey;
+    color: white;
+    
+}
+
+.compressor-status>h4{
+    border: 1px solid grey;
+}
+
+.compressor-header{
+    text-align: center;
+    border: 1px solid grey;
+    color: white;
+    background-color: #32335A;
+}
+
+
+img{
+    height: 30px;
+    width:30px;
+}

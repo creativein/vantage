@@ -4,7 +4,7 @@ export default class SideBar extends Component {
   render() {
     return (
       <div>
-        <p>this is testing</p>
+        <p>Sidebar</p>
       </div>
     )
   }

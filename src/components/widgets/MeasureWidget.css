@@ -1,0 +1,20 @@
+
+
+#grad1 {
+    position:relative;
+      height: 30px;
+      width:70%;
+      border: 2px solid grey;
+      border-radius: 50px;
+      margin: 0 auto;
+
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: linear-gradient(to right, aqua, yellow, red); /* Standard syntax
+      (must be last) */
+    }
+    .pointer{
+    position: absolute;
+    left: 10%;
+    font-size:x-large;
+    color: grey
+    }

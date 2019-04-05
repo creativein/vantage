@@ -7,5 +7,7 @@
 
 
 SideBar {
- width: 20vw;  
+ width: 20vw;
+ float:left; 
 }
+
