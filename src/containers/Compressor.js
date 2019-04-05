@@ -26,7 +26,10 @@ class Compressor extends Component {
 
             <div className="row">
                 <div className="col-lg-6">
-                    <CompressorStatus temp={this.props.compressorStat.temperature} pressure={this.props.compressorStat.pressure} />
+                    <CompressorStatus 
+                    temp={this.props.compressorStat.temperature} 
+                    pressure={this.props.compressorStat.pressure}
+                    isRunning={this.props.compressorStat.isRunning} />
                 </div>
                 <div className="col-lg-6">
                 

@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import MeasureWidget from '../widgets/MeasureWidget';
 import './CompressorStatus.css';
 export default class CompressorStatus extends Component {
-  isRunning = false;
+  runStatusLabel = 'Not Running';
   statusUrl = '';
-  runningUrl = '';
-  stoppedUrl = '';
+  runningUrl = '/images/running.png';
+  stoppedUrl = '/images/stop.png';
   headerLabel = 'Compressor Status';
   constructor(props) {
     super(props)
   }
   componentWillMount() {
     this.statusUrl = this.props.isRunning ? this.runningUrl : this.stoppedUrl  ;
+    this.runStatusLabel = this.props.isRunning? 'Running': 'Not Running';
 
   }
   componentDidMount() {
@@ -33,6 +34,7 @@ export default class CompressorStatus extends Component {
           </div>
           <div className="col-lg-2">
             <img src={this.statusUrl} alt="Running Status"></img>
+            <span>{this.runStatusLabel}</span>
           </div>
         </div>
       </React.Fragment>
