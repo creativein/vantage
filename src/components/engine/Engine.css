@@ -1,23 +1,24 @@
-
-.compressor-status{
+.engine-status{
     border: 2px solid grey;
     color: white;
     
 }
 
-.compressor-status>h4{
+.engine-status>h4{
     border: 1px solid grey;
+    padding-left: 0;
+}
+.engine-status .engine-status-col{
+    padding-left: 0;
 }
 
-.compressor-header{
+.engine-header{
     text-align: center;
     border: 1px solid grey;
     color: white;
     background-color: #32335A;
 }
 
-
-img{
-    height: 40%;
-    width: 100%;
+.engine-hours-container{
+    height: 42.5%;
 }

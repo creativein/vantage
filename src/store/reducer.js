@@ -10,7 +10,7 @@ import * as actionTypes from './action';
         pressure:40,
         isRunning: true
     },
-    engine:{
+    engineStatus:{
         engineHours: 71615,
         oilPressure:40,
         engineSpeed:30
