@@ -29,8 +29,8 @@ export default class CompressorStatus extends Component {
         </div>
         <div className="row compressor-status">
           <div className="col-lg-10">
-            <MeasureWidget label="Temperature" value={this.props.temp} />
-            <MeasureWidget label="Pressure" value={this.props.pressure} />
+            <MeasureWidget label="Temperature" value={this.props.temp} unit="Degree" />
+            <MeasureWidget label="Pressure" value={this.props.pressure} gradType="2" unit="Bar" />
           </div>
           <div className="col-lg-2">
             <img src={this.statusUrl} alt="Running Status"></img>

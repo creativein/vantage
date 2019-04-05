@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import './MeasureWidget.css';
+import classNames from 'classnames';
+
+
 export default class MeasureWidget extends Component {
     pointer;
     constructor(props) {
@@ -11,12 +14,20 @@ export default class MeasureWidget extends Component {
         this.pointer.current.style.left = this.props.value + offset + '%';
     }
     render() {
-
+        var widgetBarClasses = classNames(
+            'widget',
+            {
+                'gradient-1': !this.props.gradType || this.props.gradType == 1,
+                'gradient-2': this.props.gradType == 2
+            }
+        );
 
         return (
-            <div>
-                <h6>{this.props.label} <span className="label label-default">{this.props.value}</span></h6>
-                <div id="grad1">
+            <div className="widget-container">
+                <h6>{this.props.label}
+                    <span className="label label-default label-val">{this.props.value}  {this.props.unit}</span>
+                </h6>
+                <div className={widgetBarClasses}>
                     <span ref={this.pointer} className="pointer">I</span>
                 </div>
             </div>

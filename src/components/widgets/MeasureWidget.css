@@ -1,6 +1,10 @@
 
+.widget-container{
+  padding-bottom: 10%;
+  border:1px solid grey;
 
-#grad1 {
+}
+.widget {
     position:relative;
       height: 30px;
       width:70%;
@@ -9,6 +13,14 @@
       margin: 0 auto;
 
       background-color: red; /* For browsers that do not support gradients */
+      
+    }
+
+    .gradient-2{
+      background-image: linear-gradient(to right, blue, purple, pink); /* Standard syntax
+      (must be last) */
+    }
+    .gradient-1{
       background-image: linear-gradient(to right, aqua, yellow, red); /* Standard syntax
       (must be last) */
     }
@@ -17,4 +29,8 @@
     left: 10%;
     font-size:x-large;
     color: grey
+    }
+
+    .widget-container .label-val{
+      margin-left: 30%;
     }
