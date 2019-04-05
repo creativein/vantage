@@ -25,7 +25,9 @@ export default class CompressorStatus extends Component {
     return (
       <React.Fragment>
         <div className="row compressor-header">
+        <div className="col-lg-12">
           <h4>{this.headerLabel}</h4>
+          </div>
         </div>
         <div className="row compressor-status">
           <div className="col-lg-10">

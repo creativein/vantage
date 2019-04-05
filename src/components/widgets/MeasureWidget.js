@@ -17,8 +17,8 @@ export default class MeasureWidget extends Component {
         var widgetBarClasses = classNames(
             'widget',
             {
-                'gradient-1': !this.props.gradType || this.props.gradType == 1,
-                'gradient-2': this.props.gradType == 2
+                'gradient-1': !this.props.gradType || this.props.gradType === '1',
+                'gradient-2': this.props.gradType === '2'
             }
         );
 
