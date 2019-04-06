@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import CompressorStatus from '../components/compressor/CompressorStatus';
 import Engine from '../components/engine/Engine';
 import EnvironmentHealth from '../components/environment/EnvironemntHealth';
+import SplineChart from '../components/widgets/SplineChart';
 class Compressor extends Component {
     state = {
     }
@@ -46,6 +47,12 @@ class Compressor extends Component {
 
                 <div className="row"> 
                     <EnvironmentHealth envHealthStatus={this.props.envStat}/>
+                </div>
+                <div className="row"> 
+                <div className="col-lg-5"> <SplineChart/></div>
+                   
+                    <div className="col-lg-1"></div>
+                    <div className="col-lg-5">  <SplineChart/></div>
                 </div>
             </React.Fragment>
 
