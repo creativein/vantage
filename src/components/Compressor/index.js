@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Environment from './Environment'
 import StatusCard from './StatusCard'
+import EngineCard from './EngineCard'
 export default class index extends Component {
   render() {
     return (
@@ -8,6 +9,9 @@ export default class index extends Component {
         <div className="row">
           <div className="col-xl-6">
             <StatusCard/>
+          </div>
+          <div className="col-xl-6">
+            <EngineCard/>
           </div>
         </div>
         <div className="row">

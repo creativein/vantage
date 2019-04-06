@@ -1,17 +1,17 @@
 import React from "react";
-import "./TemperatureGauge.css";
+import "./PressureGauge.css";
 
-const TemperatureGauge = props => {
+const PressureGauge = props => {
 
 	// calculate the temperature in % to display the gauge in the div at the right place (min = 0°C, max = 70°C)
-	const { temperature } = props;
-  const temperaturePrcnt = temperature / props.dataRange * 100;
+	const { pressure } = props;
+  	const temperaturePrcnt = pressure / props.dataRange * 100;
 
 	return (
 		<div className="gradientDisplayDiv">
 			<div className="gradientDisplayText">
 				<div className="temperatureGaugeTitle">{ props.title }</div>
-				<div className="temperatureGaugeTemp">{ Math.round(temperature * 10) / 10 } °C</div>
+				<div className="temperatureGaugeTemp">{ Math.round(pressure * 10) / 10 } Bar</div>
 			</div>
 			<div className="temperatureProgress gradientProgressDiv">
 				<div
@@ -26,4 +26,4 @@ const TemperatureGauge = props => {
 	);
 }
 
-export default TemperatureGauge;
+export default PressureGauge;

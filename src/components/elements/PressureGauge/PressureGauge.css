@@ -1,0 +1,50 @@
+.gradientDisplayText{
+	display: flex;
+	justify-content: space-between;
+	padding: .6rem 0 .4rem;
+}
+
+.temperatureProgress{
+	background: linear-gradient(90deg, #0099f7 0%, #f11712 100%);
+}
+
+.gradientProgressDiv{
+	height: 24px;
+	width: 100%;
+	border-radius: 2rem;
+	overflow: hidden;
+	border: 1px solid #fff;
+}
+
+.gradientDisplayDiv{
+	margin-top: .3rem;
+}
+
+.progressGauge{
+	height: 100%;
+}
+
+.innerProgressGauge{
+	height: 20px;
+	width: 2px;
+	background-color: #fff;
+	position: absolute;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 14px solid #fff;
+	margin-left: -9px;
+	padding-top: 12px;
+}
+
+.temperatureGaugeTitle{
+	font-size: .7rem;
+}
+
+.temperatureGaugeTemp{
+	font-size: .7rem;
+}
