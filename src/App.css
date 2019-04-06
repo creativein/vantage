@@ -4,3 +4,9 @@
   background-size: cover;
   height: 100vh;
 }
+
+.scrollingNavigation {
+	position: fixed;
+	/* overflow: scroll; */
+	height: 100vh;
+}

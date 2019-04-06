@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Route, Switch, Redirect } from "react-router-dom";
 // importing the navigation
 import NavigationBar from "./components/Navigation/NavigationBar";
 import MobileNav from "./components/Navigation/MobileNav";
+// immporting the client component
+import ClientLogin from './components/ClientLogin';
+// importing compressor
+import Compressor from './components/Compressor';
 class App extends Component {
   state = {
 		clientName: "MFD",
@@ -38,10 +43,20 @@ class App extends Component {
               <NavigationBar />
             </div>
           )}
-
           <div className="col-lg-3 dummyDiv">
             { /* Dummy Div */ }
           </div>
+          <div className="col-lg-9 mainContent">
+            <ClientLogin clientName={ this.state.clientName } />
+            <Switch>
+            <Route exact path="/compressor" render={ () => (
+                <Compressor />
+            )} />
+            <Route render={ () => (
+              <Compressor />
+            )} />
+          </Switch>    
+          </div>    
         </div>
         </div>
       </div>

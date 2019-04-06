@@ -1,0 +1,56 @@
+.clientLoginDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 0rem;
+  padding: 1rem 0 1rem;
+}
+
+.logoutBtn {
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #CF1218;
+  border: none;
+  padding: .3rem 1.8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.logoutBtn:hover {
+  background-color: #BA0A0F;
+}
+
+.logoutBtnDiv {
+  margin-bottom: 1rem;
+}
+
+.btnText {
+  padding-right: .5rem;
+}
+
+.clientNameDiv {
+  color: #fff;
+  background-color: #1c1c1cb3;
+  background-color: #040e20b3;
+  box-shadow: 0 0 3px 0 rgba(12, 48, 108, 0.6);
+  padding: .5rem 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 3rem;
+  border: 2px solid #1B3F74;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.clientName {
+  margin: 0;
+  font-weight: 400;
+}
+
+.clientNameRed {
+  color: #ff1111;
+}
