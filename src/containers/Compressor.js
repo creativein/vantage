@@ -41,6 +41,7 @@ class Compressor extends Component {
 
                 </div>
             </div>
+            
         );
     }
 }
