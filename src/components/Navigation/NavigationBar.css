@@ -1,0 +1,42 @@
+.navLogo{
+	padding: 0 0 2rem 1rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	max-width: 350px;
+}
+
+.navItemDiv{
+	display: flex;
+	align-items: center;
+	padding: .5rem 2rem;
+	border-radius: 0 3rem 3rem 0;
+  margin-left: -17px;
+	border: 2px solid transparent;
+	padding-left: 17px;
+	transition: .2s;
+}
+.navItemDiv:hover{
+	background-color: #0004;
+}
+.navItemActive{
+	background-color: #0007 !important;
+	border: 2px solid #1B3F74;
+}
+
+.navTitle{
+	margin: 0;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.2rem;
+	padding-left: .5rem;
+}
+
+.vantageLogo{
+	width: 70%;
+	padding-top: 1rem;
+}
+
+.navImage{
+	height: 80px;
+}

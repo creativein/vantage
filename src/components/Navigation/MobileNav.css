@@ -1,0 +1,20 @@
+.mobileNavHeader{
+	display: flex;
+	align-items: flex-start;
+	/* align-items: center; */
+	justify-content: space-between;
+}
+
+.mobileMenuBtn{
+	border: none;
+	background: none;
+	cursor: pointer;
+	transition: .2s;
+}
+.mobileMenuBtn:hover{
+	opacity: .7;
+}
+
+.mobileNavItemsDiv{
+	padding-bottom: 50px;
+}
