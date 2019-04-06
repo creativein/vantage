@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './GaugeSeries.css';
 import Highcharts from "highcharts";
 
-
 import {
   HighchartsChart,
   withHighcharts,
@@ -12,8 +11,10 @@ import {
   Tooltip
 } from "react-jsx-highcharts";
 
+
 require("highcharts/highcharts-more")(Highcharts);
 require("highcharts/modules/exporting")(Highcharts);
+
 
 const plotOptions = {
   plotBackgroundColor: null,

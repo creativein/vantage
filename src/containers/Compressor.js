@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 
 import CompressorStatus from '../components/compressor/CompressorStatus';
 import Engine from '../components/engine/Engine';
+import EnvironmentHealth from '../components/environment/EnvironemntHealth';
 class Compressor extends Component {
     state = {
     }
@@ -24,24 +25,30 @@ class Compressor extends Component {
         return (
 
 
+            <React.Fragment>
+                <div className="row">
+                    <div className="col-lg-5">
+                        <CompressorStatus
+                            temp={this.props.compressorStat.temperature}
+                            pressure={this.props.compressorStat.pressure}
+                            isRunning={this.props.compressorStat.isRunning} />
+                    </div>
+                    <div className="col-lg-1"></div>
+                    <div className="col-lg-5">
+                        <Engine
+                            engineHours={this.props.engineStat.engineHours}
+                            oilPressure={this.props.engineStat.oilPressure}
+                            engineSpeed={this.props.engineStat.engineSpeed} />
 
-            <div className="row">
-                <div className="col-lg-5">
-                    <CompressorStatus
-                        temp={this.props.compressorStat.temperature}
-                        pressure={this.props.compressorStat.pressure}
-                        isRunning={this.props.compressorStat.isRunning} />
-                </div>
-                <div className="col-lg-1"></div>
-                <div className="col-lg-5">
-                    <Engine 
-                     engineHours= {this.props.engineStat.engineHours}
-                     oilPressure={this.props.engineStat.oilPressure}
-                     engineSpeed={this.props.engineStat.engineSpeed}/>
+                    </div>
 
                 </div>
-            </div>
-            
+
+                <div className="row"> 
+                    <EnvironmentHealth envHealthStatus={this.props.envStat}/>
+                </div>
+            </React.Fragment>
+
         );
     }
 }
@@ -54,7 +61,8 @@ const mapDispatchToProps = dispatch => {
 const mapStateToProps = state => {
     return {
         compressorStat: state.compressorStatus,
-        engineStat: state.engineStatus
+        engineStat: state.engineStatus,
+        envStat: state.envHealth
     };
 }
 
