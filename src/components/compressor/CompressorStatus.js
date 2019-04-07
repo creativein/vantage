@@ -6,7 +6,7 @@ export default class CompressorStatus extends Component {
   statusUrl = '';
   runningUrl = '/images/running.png';
   stoppedUrl = '/images/stop.png';
-  headerLabel = 'Compressor Status';
+  headerLabel = 'COMPRESSOR STATUS';
   constructor(props) {
     super(props)
   }
@@ -34,9 +34,10 @@ export default class CompressorStatus extends Component {
             <MeasureWidget label="Temperature" value={this.props.temp} unit="Degree" />
             <MeasureWidget label="Pressure" value={this.props.pressure} gradType="2" unit="Bar" />
           </div>
-          <div className="col-lg-2">
-            <img src={this.statusUrl} alt="Running Status"></img>
-            <span>{this.runStatusLabel}</span>
+          <div className="col-lg-2 ">
+            <img className="running-status"
+            src={this.statusUrl} alt="Running Status"></img>
+            <span className="running-status">{this.runStatusLabel}</span>
           </div>
         </div>
       </React.Fragment>

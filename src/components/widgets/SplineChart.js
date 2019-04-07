@@ -100,22 +100,18 @@ class SplineChart extends Component {
                 <HighchartsChart plotOptions={plotOptions}>
                     <Chart type="spline" />
 
-                    <Title>{this.props.chartLabel}</Title>
-
-
                     <Tooltip valueSuffix="" />
 
                     <XAxis
-                        minorGridLineWidth={1}
-                        gridLineWidth={1}
-                        dashStyle={'dash-array'}
+                        minorGridLineWidth={0.5}
+                        gridLineWidth={0.5}
                         type="datetime"
-                        week={'%e. %b'}
                     >
-                        <XAxis.Title>Day</XAxis.Title>
+                      
                     </XAxis>
 
-                    <YAxis minorGridLineWidth={1} gridLineWidth={1} alternateGridColor={''}>
+                    <YAxis minorGridLineWidth={0.5}
+                     gridLineWidth={0.5}>
                         <YAxis.Title></YAxis.Title>
                         <SplineSeries name="" data={this.props.chartData} />
                         {bands.map(this.renderPlotBand)}

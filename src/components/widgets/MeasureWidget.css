@@ -1,8 +1,7 @@
 
 .widget-container{
   padding-bottom: 10%;
-  border:1px solid grey;
-
+  border-bottom: 2px solid rgba(0,0,0,.31);
 }
 .widget {
     position:relative;
@@ -24,13 +23,17 @@
       background-image: linear-gradient(to right, aqua, yellow, red); /* Standard syntax
       (must be last) */
     }
-    .pointer{
+  .pointer{
     position: absolute;
-    left: 10%;
-    font-size:x-large;
-    color: grey
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid #fff;
+    margin-left: -9px;
+    padding-top: 12px;
     }
 
     .widget-container .label-val{
-      margin-left: 30%;
+      margin-left: 36%;
     }

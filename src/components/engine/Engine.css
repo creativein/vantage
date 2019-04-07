@@ -1,11 +1,9 @@
 .engine-status{
-    border: 2px solid grey;
     color: white;
     
 }
 
 .engine-status>h4{
-    border: 1px solid grey;
     padding-left: 0;
 }
 .engine-status .engine-status-col{
@@ -14,7 +12,6 @@
 
 .engine-header{
     text-align: center;
-    border: 1px solid grey;
     color: white;
     background-color: #000;
     background: linear-gradient(-180deg,#00102b,#002052);

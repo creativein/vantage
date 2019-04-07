@@ -18,11 +18,9 @@
 
 .env-health-container{
     margin:10px;
-    border: 3px solid grey;
 }
 .env-health-container .env-health-header{
     color: white;
-    border: 1px solid grey;
     background-color: #000;
     background: linear-gradient(-180deg,#00102b,#002052);
     border-radius: .3rem .3rem 0 0;

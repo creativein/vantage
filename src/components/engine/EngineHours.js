@@ -20,7 +20,7 @@ export default class EngineHours extends Component {
         
         return (
             <React.Fragment>
-                 <h6>{this.headerLabel}</h6>
+                 <h6 className="engine-hours-label">{this.headerLabel}</h6>
               {this.createHourView(this.engineHours)}
             </React.Fragment>
 

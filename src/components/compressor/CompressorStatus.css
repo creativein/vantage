@@ -1,17 +1,13 @@
 
 .compressor-status{
-    border: 2px solid grey;
     color: white;
     
 }
 
-.compressor-status>h4{
-    border: 1px solid grey;
-}
+
 
 .compressor-header{
     text-align: center;
-    border: 1px solid grey;
     color: white;
     background-color: #000;
     background: linear-gradient(-180deg,#00102b,#002052);
@@ -20,6 +16,11 @@
 
 
 img{
-    height: 40%;
+    height: 30%;
     width: 100%;
+}
+
+.running-status{
+    position:relative;
+    top:30%;
 }

@@ -45,7 +45,7 @@ class Compressor extends Component {
 
                 </div>
 
-                <div className="row">
+                <div className="row env-container-main">
                     <EnvironmentHealth envHealthStatus={this.props.envStat} />
                 </div>
                 <div className="row">

@@ -1,15 +1,24 @@
 .chart-buttons{
 
-    border-radius: 37%;
-    height: 30px;
+  
     top:1%;
-    color: white;
+    padding: .3rem .8rem;
+    border: 1px solid #fff;
+    background-color: #092c65;
+    color: #fff;
+    border-radius: 2rem;
+    font-size: .8rem;
+    width: 70px;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: none;
+    transition: .2s;
 }
 
 .day-btn{
     background-color: white;
     color: black;
-    right:20%
+    right:40%
 }
 
 .week-btn{

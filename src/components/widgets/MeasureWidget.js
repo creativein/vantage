@@ -11,7 +11,7 @@ export default class MeasureWidget extends Component {
     }
     componentDidMount() {
         const offset = 1;
-        this.pointer.current.style.left = this.props.value + offset + '%';
+        this.pointer.current.style.left = this.props.value  + '%';
     }
     render() {
         var widgetBarClasses = classNames(
@@ -28,7 +28,7 @@ export default class MeasureWidget extends Component {
                     <span className="label label-default label-val">{this.props.value}  {this.props.unit}</span>
                 </h6>
                 <div className={widgetBarClasses}>
-                    <span ref={this.pointer} className="pointer">I</span>
+                    <span ref={this.pointer} className="pointer"></span>
                 </div>
             </div>
         )
