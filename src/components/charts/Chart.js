@@ -8,7 +8,7 @@ export default class Chart extends Component {
   render() {
     return (
       <React.Fragment>
-        <div class="row">
+        <div class="row chart-container">
           <div className="col-lg-8 chart-label">
             <h4>{this.props.chartProps.label}</h4>
           </div>
@@ -17,10 +17,14 @@ export default class Chart extends Component {
             <button type="button" className="btn chart-buttons week-btn">Week</button>
           </div>
         </div>
+        <div class="row">
+          <div className="col-lg-12 spline-container">
+            <SplineChart className=""
+              chartLabel={this.props.chartProps.label}
+              chartData={this.props.chartProps.data} />
+          </div>
+        </div>
 
-        <SplineChart
-          chartLabel={this.props.chartProps.label}
-          chartData={this.props.chartProps.data} />
       </React.Fragment>
 
     );

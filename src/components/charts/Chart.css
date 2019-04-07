@@ -1,7 +1,8 @@
 .chart-buttons{
 
     border-radius: 37%;
-    height: 35px;
+    height: 30px;
+    top:1%;
     color: white;
 }
 
@@ -18,4 +19,8 @@
 
 .chart-label{
     background-color: #32335A;
+}
+
+.chart-container,.spline-container{
+    border: 1px solid grey;
 }
