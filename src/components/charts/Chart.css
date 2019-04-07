@@ -1,0 +1,21 @@
+.chart-buttons{
+
+    border-radius: 37%;
+    height: 35px;
+    color: white;
+}
+
+.day-btn{
+    background-color: white;
+    color: black;
+    right:20%
+}
+
+.week-btn{
+    right:3%;
+    background-color:#00011F;
+}
+
+.chart-label{
+    background-color: #32335A;
+}

@@ -17,7 +17,7 @@ export default class ToggleSwitch extends React.Component {
                     <input type="checkbox"
                      defaultChecked={this.props.isChecked}
                      onChange={this.handleChange}></input>
-                    <span class="slider round"></span>
+                    <span className="slider round"></span>
                 </label>
             </div>
         );

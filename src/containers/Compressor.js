@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import CompressorStatus from '../components/compressor/CompressorStatus';
 import Engine from '../components/engine/Engine';
 import EnvironmentHealth from '../components/environment/EnvironemntHealth';
-import SplineChart from '../components/widgets/SplineChart';
+import Chart from '../components/charts/Chart';
 class Compressor extends Component {
     state = {
     }
@@ -45,14 +45,18 @@ class Compressor extends Component {
 
                 </div>
 
-                <div className="row"> 
-                    <EnvironmentHealth envHealthStatus={this.props.envStat}/>
+                <div className="row">
+                    <EnvironmentHealth envHealthStatus={this.props.envStat} />
                 </div>
-                <div className="row"> 
-                <div className="col-lg-5"> <SplineChart/></div>
-                   
+                <div className="row">
+                    <div className="col-lg-5">
+                        <Chart chartProps={this.props.chartProps.machineRuntime} />
+                    </div>
+
                     <div className="col-lg-1"></div>
-                    <div className="col-lg-5">  <SplineChart/></div>
+                    <div className="col-lg-5">
+                        <Chart chartProps={this.props.chartProps.tempProfile} />
+                    </div>
                 </div>
             </React.Fragment>
 
@@ -69,7 +73,8 @@ const mapStateToProps = state => {
     return {
         compressorStat: state.compressorStatus,
         engineStat: state.engineStatus,
-        envStat: state.envHealth
+        envStat: state.envHealth,
+        chartProps: state.chartData
     };
 }
 
