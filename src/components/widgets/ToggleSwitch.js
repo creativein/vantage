@@ -13,7 +13,7 @@ export default class ToggleSwitch extends React.Component {
     render() {
         return (
             <div>
-                <label class="switch">
+                <label className="switch">
                     <input type="checkbox"
                      defaultChecked={this.props.isChecked}
                      onChange={this.handleChange}></input>

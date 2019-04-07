@@ -40,11 +40,11 @@ export default class Engine extends Component {
                     <div className="col-lg-10 engine-status-col">
                         <MeasureWidget label="Oil Pressure" value={this.props.oilPressure} unit="Bar" gradType="2" />
                     </div>
-                    {/* <div >
+                    {/* <div  className="col-lg-2" >
                         <GaugeSeries value={this.props.engineSpeed} />
                        
-                    </div>
-                     */}
+                    </div> */}
+                    
                      
                 </div>
             </React.Fragment>

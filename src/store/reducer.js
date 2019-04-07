@@ -25,6 +25,16 @@ const initialState = {
             prRatio: 1,
             disPressure: 0,
             sucPressure: 1
+        },
+        chartData:{
+            machineRuntime:{
+                label: 'MACHINE RUNTIMES',
+                data:[200, 300, 250, 150, 200, 400, 300]
+            },
+            tempProfile:{
+                label: 'TEMPERATURE PROFILE',
+                data:[200, 300, 250, 150, 200, 400, 300]
+            }
         }
 
     }

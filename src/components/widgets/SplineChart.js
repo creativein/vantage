@@ -28,6 +28,9 @@ class SplineChart extends Component {
     const plotOptions =  {
       spline: {
         lineWidth: 3,
+        line:{
+            dashStyle:'Dash'
+        },
           states: {
           hover: {
             lineWidth: 5
@@ -62,6 +65,7 @@ class SplineChart extends Component {
           <XAxis
             minorGridLineWidth={1}
              gridLineWidth={1} 
+             dashStyle={'dash-array'}
              type="datetime"
              week={'%e. %b'}
              >

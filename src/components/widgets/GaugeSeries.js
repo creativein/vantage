@@ -1,116 +1,99 @@
-import React, { Component } from 'react'
-import './GaugeSeries.css';
-import Highcharts from "highcharts";
-
+import React, { Component } from 'react';
+import Highcharts from 'highcharts';
 import {
-  HighchartsChart,
-  withHighcharts,
-  Series,
-  XAxis,
-  YAxis,
-  Tooltip
-} from "react-jsx-highcharts";
-
-
-require("highcharts/highcharts-more")(Highcharts);
-require("highcharts/modules/exporting")(Highcharts);
-
+  HighchartsChart, withHighcharts, XAxis, YAxis, Pane, SolidGaugeSeries
+} from 'react-jsx-highcharts';
 
 const plotOptions = {
-  plotBackgroundColor: null,
-  plotBackgroundImage: null,
-  plotBorderWidth: 0,
-  plotShadow: false
-};
-
-const paneOptions = {
-  startAngle: -120,
-  endAngle: 120,
-  background: [
-    {
-      backgroundColor: {
-        linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-        stops: [[0, "#FFF"], [1, "#333"]]
-      },
+  solidgauge: {
+    dataLabels: {
+      y: 5,
       borderWidth: 0,
-      outerRadius: "109%"
-    },
-    {
-      backgroundColor: {
-        linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-        stops: [[0, "#333"], [1, "#FFF"]]
-      },
-      borderWidth: 1,
-      outerRadius: "107%"
-    },
-    {
-      backgroundColor: "#DDD",
-      borderWidth: 0,
-      outerRadius: "105%",
-      innerRadius: "103%"
+      useHTML: true
     }
-  ]
+  }
 };
-//<Tooltip padding={10} hideDelay={250} shape="square" />
-const GraphRender = ({ data }) => {
-  return (
-    <div className="gauge-empty">
-      <div className="no-data">Data Unavaialble</div>
-      <HighchartsChart
-        chart={{ type: "gauge" }}
+
+class App extends Component {
+
+  state = {
+    kmph: 80
+  }
+
+  componentDidMount () {
+    this.interval = window.setInterval(this.updateSpeed, 1000)
+  }
+
+  componentWillUnmount () {
+    window.clearInterval(this.interval)
+  }
+
+  updateSpeed = () => {
+    this.setState(({ kmph }) => {
+      const offset = this.getRandomSpeedOffset()
+      const newKmph = Math.max(0, Math.min(200, kmph + offset));
+      return {
+        kmph: newKmph
+      }
+    })
+  }
+
+  getRandomSpeedOffset = () => {
+    return Math.floor(Math.random() * 40) - 20;
+  }
+
+  render() {
+    return (
+      <div className="app">
+        <HighchartsChart gauge plotOptions={plotOptions}>
+          <Pane
+            center={['50%', '85%']}
+            size='100%'
+            startAngle={-90}
+            endAngle={90}
+            background={{
+              backgroundColor: '#EEE',
+              innerRadius: '60%',
+              outerRadius: '100%',
+              shape: 'arc'
+            }} />
+          <XAxis />
+          <YAxis
+            stops={[
+              [0.1, '#55BF3B'],
+              [0.5,  '#DDDF0D'],
+              [0.9, '#DF5353']
+            ]}
+            lineWidth={0}
+            minorTickInterval={null}
+            tickPixelInterval={400}
+            tickWidth={0}
+            labels={{
+              y: 16,
+              style: { display: 'none' }
+            }}
+            min={0}
+            max={200}>
+            <YAxis.Title y={-110}>Speed</YAxis.Title>
+            <SolidGaugeSeries
+              name='Speed'
+              data={[ this.state.kmph ]}
+              dataLabels={{
+                format: '<div style="text-align:center"><span style="font-size:25px;color:black">{y}</span><br/><span style="font-size:12px;color:silver">km/h</span></div>',
+                y: -50
+              }}
+              tooltip={{
+                valueSuffix: ' km/h'
+              }}
+            />
+          </YAxis>
+
+        </HighchartsChart>
+
         
-        pane={paneOptions}
-      >
-        <Tooltip padding={10} hideDelay={250} shape="square" />
+      </div>
+    );
+  }
+}
 
-        <XAxis />
-
-        <YAxis
-          id="myAxis"
-          min={0}
-          max={100}
-          minorTickInterval="auto"
-          minorTickWidth={1}
-          minorTickLength={10}
-          minorTickPosition="inside"
-          minorTickColor="#666"
-          tickPixelInterval={30}
-          tickWidth={2}
-          tickPosition="inside"
-          tickLength={10}
-          tickColor="#666"
-          labels={{
-            step: 2,
-            rotation: "auto"
-          }}
-          title={{
-            text: ""
-          }}
-          plotBands={[
-            {
-              from: 0,
-              to: 60,
-              color: "#55BF3B" // green
-            },
-            {
-              from: 60,
-              to: 80,
-              color: "#DDDF0D" // yellow
-            },
-            {
-              from: 80,
-              to: 100,
-              color: "#DF5353" // red
-            }
-          ]}
-        >
-          <Series id="series" name="Value" data={[80]} type="gauge" />
-        </YAxis>
-      </HighchartsChart>
-    </div>
-  );
-};
-
-const Gauge = ({ data }) => <GraphRender data={data} />;
-
-export default withHighcharts(Gauge, Highcharts);
+export default withHighcharts(App, Highcharts);
