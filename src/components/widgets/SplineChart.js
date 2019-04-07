@@ -40,6 +40,10 @@ Highcharts.theme = {
                 color: 'rgb(205, 205, 205)'
             },
         },
+        type: 'datetime',
+        dateTimeLabelFormats: {
+            week: '%b'
+        },
         gridLineColor: 'white',
         gridLineDashStyle:'Dash'
     },
@@ -98,7 +102,6 @@ class SplineChart extends Component {
 
                     <Title>{this.props.chartLabel}</Title>
 
-                    <Legend />
 
                     <Tooltip valueSuffix="" />
 

@@ -28,7 +28,7 @@ export default class Engine extends Component {
                         <h4>{this.headerLabel}</h4>
                     </div>
                 </div>
-                <div className="row engine-hours-container">
+                <div className="row engine-hours-container card-body">
                     <div className="col-lg-10">
                         <EngineHours engineHours={this.props.engineHours} />
                     </div>
@@ -36,7 +36,7 @@ export default class Engine extends Component {
 
                     </div>
                 </div>
-                <div className="row engine-status">
+                <div className="row engine-status card-body">
                     <div className="col-lg-10 engine-status-col">
                         <MeasureWidget label="Oil Pressure" value={this.props.oilPressure} unit="Bar" gradType="2" />
                     </div>

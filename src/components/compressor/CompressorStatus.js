@@ -29,7 +29,7 @@ export default class CompressorStatus extends Component {
           <h4>{this.headerLabel}</h4>
           </div>
         </div>
-        <div className="row compressor-status">
+        <div className="row compressor-status card-body">
           <div className="col-lg-10">
             <MeasureWidget label="Temperature" value={this.props.temp} unit="Degree" />
             <MeasureWidget label="Pressure" value={this.props.pressure} gradType="2" unit="Bar" />

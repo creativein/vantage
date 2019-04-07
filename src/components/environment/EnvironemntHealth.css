@@ -4,7 +4,9 @@
     margin: 5px;
     color: white;
     padding:10px;
-    background-color: #00011F;
+    background-color: #000;
+    background: linear-gradient(-180deg,#00102b,#002052);
+    border-radius: .4rem .4rem 0 0;
 }
 .health-attr .attr-label{
     float:left;
@@ -21,6 +23,8 @@
 .env-health-container .env-health-header{
     color: white;
     border: 1px solid grey;
-    background-color: #32335A
+    background-color: #000;
+    background: linear-gradient(-180deg,#00102b,#002052);
+    border-radius: .3rem .3rem 0 0;
 
 }

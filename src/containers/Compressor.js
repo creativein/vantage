@@ -26,7 +26,7 @@ class Compressor extends Component {
         return (
 
 
-            <React.Fragment>
+            <div className="container-fluid">
                 <div className="row">
                     <div className="col-lg-5">
                         <CompressorStatus
@@ -34,7 +34,7 @@ class Compressor extends Component {
                             pressure={this.props.compressorStat.pressure}
                             isRunning={this.props.compressorStat.isRunning} />
                     </div>
-                    <div className="col-lg-1"></div>
+                    <div className="col-lg-2"></div>
                     <div className="col-lg-5">
                         <Engine
                             engineHours={this.props.engineStat.engineHours}
@@ -53,12 +53,12 @@ class Compressor extends Component {
                         <Chart chartProps={this.props.chartProps.machineRuntime} />
                     </div>
 
-                    <div className="col-lg-1"></div>
+                    <div className="col-lg-2"></div>
                     <div className="col-lg-5">
                         <Chart chartProps={this.props.chartProps.tempProfile} />
                     </div>
                 </div>
-            </React.Fragment>
+            </div>
 
         );
     }

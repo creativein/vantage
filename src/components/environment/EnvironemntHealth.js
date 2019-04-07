@@ -31,13 +31,13 @@ export default class EngineHours extends Component {
                 <div className="row env-health-header">
                     <div className="col-lg-12"><h4>{this.headerLabel}</h4></div>
                 </div>
-                <div className="row">
+                <div className="row card-body">
                     <div className="col-lg-5">
                         {this.createHealthAttributeDiv('INTERMEDIATE TEMPERATURE',tempAttr.intTemp)}
                         {this.createHealthAttributeDiv('DISCHARGE GAS TEMPERATURE', tempAttr.gasTemp)}
                         {this.createHealthAttributeDiv('EMERGENCY STOP', tempAttr.emgStop)}
                     </div>
-                    <div className="col-lg-1">
+                    <div className="col-lg-2">
                     </div>
                     <div className="col-lg-5">
                         {this.createHealthAttributeDiv('PRESSURE RATIO', pressAttr.prRatio)}

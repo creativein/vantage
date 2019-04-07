@@ -2,12 +2,20 @@
   text-align: center;
   background: url('/images/background.png') no-repeat;
   background-size: cover;
- padding:10px;
+  padding-left:0;
 }
 
 
 SideBar {
- width: 20vw;
+ 
  float:left; 
+}
+
+.card-body{
+  background-color: rgba(5,36,88,.78);
+    padding: .5rem .8rem;
+    border-radius: 0 0 .3rem .3rem;
+    border: 2px solid #1b3f74;
+    border-top: none;
 }
 
