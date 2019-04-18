@@ -15,12 +15,12 @@
                 <div className="row">
                   <div className="col-lg-8">
                     <TemperatureGauge
-                      dataRange={ this.props.dataTemperatureRange }
-                      temperature={ this.props.Temperature }
+                      dataRange={ 80 }
+                      temperature={ 32 }
                       title="TEMPERATURE" />
                     <PressureGauge
-                      dataRange={ this.props.dataPressureRange }
-                      pressure={ this.props.pressure }
+                      dataRange={ 40 }
+                      pressure={ 10 }
                       title="PRESSURE" />
                   </div>
                   <div className="col-lg-4">

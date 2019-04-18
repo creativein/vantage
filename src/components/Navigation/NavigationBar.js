@@ -28,13 +28,13 @@ class NavigationBar extends Component {
 	}
 
 	render(){
-		const { activeLink } = this.state;
+		// const { activeLink } = this.state;
+		// TODO: This is for testing
+		const activeLink = "compressor";
 		// Set the Active Link
 		const powerRoomStatus = activeLink === "power" ? "navItemActive" : "";
-		// const waterRoomStatus = activeLink === "water" ? "navItemActive" : "";
-		const waterHeatingRoomStatus = activeLink === "water-heating" ? "navItemActive" : "";
-		const hvacRoomStatus = activeLink === "hvac" ? "navItemActive" : "";
-		const alarmsRoomStatus = activeLink === "alarms" ? "navItemActive" : "";
+		const compressorRoomStatus = activeLink === "compressor" ? "navItemActive" : "";
+		const alarmsRoomStatus = activeLink === "alarm" ? "navItemActive" : "";
 
 		return (
 			<div className="navBarDiv">
@@ -58,7 +58,7 @@ class NavigationBar extends Component {
 
 				<Link to="/compressor"
 					onClick={ () => this.changeActiveLink("compressor")} >
-					<div className={ `navItemDiv ${ hvacRoomStatus }` } >
+					<div className={ `navItemDiv ${ compressorRoomStatus }` } >
 						<img
 							className="navImage"
 							src={ navIcon4 }
